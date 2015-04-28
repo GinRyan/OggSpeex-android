@@ -110,6 +110,7 @@ public class SpeexDecoder {
 				// make sure its a OGG header
 				if (!OGGID.equals(new String(header, 0, 4))) {
 					System.err.println("missing ogg id!");
+					dis.close();
 					return;
 				}
 
